@@ -106,4 +106,3 @@ int tx_post_dissection(uint8_t *pkt_buf, int pkt_length, wd_modules_ctx_t *ctx)
 }
 
 ```
-logo
