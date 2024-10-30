@@ -106,3 +106,225 @@ int tx_post_dissection(uint8_t *pkt_buf, int pkt_length, wd_modules_ctx_t *ctx)
 }
 
 ```
+
+**Crash Event Log**
+
+```console
+[2024-10-11 02:24:29.401786] [ParseArgs] "EnableSimulator" unchanged (true)
+[2024-10-11 02:24:29.401879] [ParseArgs] "MCC" unchanged ("001")
+[2024-10-11 02:24:29.401892] [ParseArgs] "MNC" unchanged ("01")
+[2024-10-11 02:24:29.401901] [ParseArgs] "GlobalTimeout" unchanged (false)
+[2024-10-11 02:24:29.401910] [ParseArgs] "EnableMutation" unchanged (false)
+[2024-10-11 02:24:29.401917] [Modules] Loading C++ Modules at "modules/exploits/5gnr_gnb"
+[2024-10-11 02:24:29.942390] [Modules] 2022/2022 Modules Compiled / Loaded
+[2024-10-11 02:24:29.942394] [Modules] All modules using prefix
+[2024-10-11 02:24:29.942399] [Modules] mac_sch_1__CellGroupConfig_rlc_BearerToAddModList_reencoded_0 configured and ready!
+[2024-10-11 02:24:29.942404] [Modules] Enabled module "mac_sch_1__CellGroupConfig_rlc_BearerToAddModList_reencoded_0"
+[2024-10-11 02:24:29.942408] ----------LTE Fuzzer----------
+[2024-10-11 02:24:29.942414] Loading Model...
+[2024-10-11 02:24:29.942419] Model Loaded!
+[2024-10-11 02:24:29.942423] [Machine] Layer:"NAS"
+[2024-10-11 02:24:29.942428] [Machine] --> States:0, Transitions:0
+[2024-10-11 02:24:29.942433] [Machine] Layer:"RRC"
+[2024-10-11 02:24:29.942437] [Machine] --> States:0, Transitions:0
+[2024-10-11 02:24:29.942442] [Machine] Layer:"RLC"
+[2024-10-11 02:24:29.942447] [Machine] --> States:0, Transitions:0
+[2024-10-11 02:24:29.942451] [Machine] Layer:"MAC-NR"
+[2024-10-11 02:24:29.942456] [Machine] --> States:0, Transitions:0
+[2024-10-11 02:24:29.942461] [Machine] Total States: 38
+[2024-10-11 02:24:29.942468] [Machine] Total Transitions: 308
+[2024-10-11 02:24:29.942472] [Monitor] Connection string: adb -s UWEUW4XG8XCA8PWS shell "logcat -b radio,crash,system,main"
+[2024-10-11 02:24:29.952577] [Monitor] ADB Connected to device: UWEUW4XG8XCA8PWS
+[2024-10-11 02:24:29.979308] [SHMDriver] SHM:/tmp/wshm, Channel:0, Mode:1, MQUEUE:/wshm
+[2024-10-11 02:24:30.014183] [SHMDriver] SHM:/tmp/wshm, Channel:1, Mode:1
+[2024-10-11 02:24:30.014239] [SHMDriver] SHM:/tmp/wshm, Channel:2, Mode:1
+[2024-10-11 02:24:30.014244] [SHMDriver] SHM:/tmp/wshm, Channel:3, Mode:1
+[2024-10-11 02:24:30.014247] [SHMDriver] SHM:/tmp/wshm, Channel:4, Mode:1
+[2024-10-11 02:24:30.014251] [SHMDriver] SHM:/tmp/wshm, Channel:5, Mode:1
+[2024-10-11 02:24:30.014254] [SHMDriver] SHM:/tmp/wshm, Channel:6, Mode:1
+[2024-10-11 02:24:30.014258] [Open5GS] Adding IMSI 001010000000001 with K=00112233445566778899AABBCCDDEEFF, OPC=00112233445566778899AABBCCDDEEFF, APN=default
+[2024-10-11 02:24:30.129307] [Open5GS] Adding IMSI 001010100011321 with K=12345678901234567890123456789012, OP=12345678901234561234567890123456, APN=default
+[2024-10-11 02:24:30.243241] [Open5GS] Adding IMSI 001010000064950 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
+[2024-10-11 02:24:30.360644] [Open5GS] Adding IMSI 001010000064951 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
+[2024-10-11 02:24:30.477791] [Open5GS] Adding IMSI 001020000064951 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
+[2024-10-11 02:24:30.589535] [Open5GS] Adding IMSI 001010000064952 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
+[2024-10-11 02:24:30.700992] [Open5GS] Adding IMSI 001010000064953 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
+[2024-10-11 02:24:30.812826] [Open5GS] Adding IMSI 999700000064959 with K=5FBC6D9274D7D3F03E32B12DBF582424, OPC=32B95812161923774B71D508A1D4D3B6, APN=internet
+[2024-10-11 02:24:30.928087] [Open5GS] Adding IMSI 901700000039907 with K=33CD0E15C56301487706C843E5BC53C1, OPC=3E91AD887FB569F4A68EEB8282872B0F, APN=internet
+[2024-10-11 02:24:31.041477] [Open5GS] Adding IMSI 222010000039900 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=internet
+[2024-10-11 02:24:31.156220] [Open5GS] Adding IMSI 208950000039900 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=internet
+[2024-10-11 02:24:31.267186] [Open5GS] Adding IMSI 525070000039900 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=internet
+[2024-10-11 02:24:31.379037] [Open5GS] Adding IMSI 222010100000002 with K=0c2d427dc188ed0284c4dd0fde705060, OPC=64f4f96c49dfac6a89b45dfa15574a75, APN=internet
+[2024-10-11 02:24:31.496216] [Open5GS] Adding IMSI 901700000039908 with K=E5EB44B93317E84EBA206EF962A29D8C, OPC=4242F3B4D58A5DA39336E1F8CB643B2A, APN=internet
+[2024-10-11 02:24:31.613373] [Open5GS] Subscribers registered to core network: 14
+[2024-10-11 02:24:31.995643] [!] Simulation Enabled, disabling ModemManager and HubCtrl. Remember to enabled them later!
+[2024-10-11 02:24:32.995040] Starting OAI UE Simulator (RFSIM)
+[2024-10-11 02:24:33.027550] [!] UE process started
+[2024-10-11 02:24:33.027615] [GlobalTimeout] Not enabled in config. file
+[2024-10-11 02:24:33.027630] [AnomalyReport] Added Logging Sink: PacketLogger
+[2024-10-11 02:24:33.027641] [AnomalyReport] Added Logging Sink: SvcReportSender
+[2024-10-11 02:24:33.027652] [USBHubControl] Disabled in config. file
+[2024-10-11 02:24:33.027663] [ModemManager] ModemManager not started!
+[2024-10-11 02:24:33.027674] [ReportSender] Credentials file not found: modules/reportsender/credentials.json
+[2024-10-11 02:24:33.027684] [ReportSender] Ready
+[2024-10-11 02:24:33.027697] [Optimizer] Optimization disabled. Using default population:
+[2024-10-11 02:24:33.027708] --------------------------------------------------------
+[2024-10-11 02:24:33.027719] [Optimizer] Iter=1  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:33.027730] [Optimizer] Fitness=1e+06  Adj. Fitness=-1e+06
+[2024-10-11 02:24:33.027741] --------------------------------------------------------
+[2024-10-11 02:24:33.027751] [Optimizer] Initialized with X Size=293, Population Size=5
+[2024-10-11 02:24:33.027762] [Main] Fuzzing not enabled! Running only target reconnection
+[2024-10-11 02:24:33.037835] [PacketHandler] Added "proto:nas-5gs", Dir:0, Realtime:0, TID:1432074
+[2024-10-11 02:24:33.037882] [PacketHandler] Added "proto:nas-5gs", Dir:1, Realtime:0, TID:1432076
+[2024-10-11 02:24:33.037892] [PacketHandler] Added "proto:pdcp-nr-framed", Dir:0, Realtime:1, TID:1432077
+[2024-10-11 02:24:33.037902] [PacketHandler] Added "proto:pdcp-nr-framed", Dir:1, Realtime:1, TID:1432078
+[2024-10-11 02:24:33.037913] [PacketHandler] Added "proto:mac-nr-framed", Dir:0, Realtime:1, TID:1432079
+[2024-10-11 02:24:33.037922] [PacketHandler] Added "proto:mac-nr-framed", Dir:0, Realtime:1, TID:1432080
+[2024-10-11 02:24:33.059319] [PacketHandler] Added "proto:mac-nr-framed", Dir:1, Realtime:0, TID:1432082
+[2024-10-11 02:24:33.596482] [Main] eNB/gNB started!
+[2024-10-11 02:24:33.596536] [!] Waiting UE task to start...
+[2024-10-11 02:24:36.264577] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:24:36.264660] --------------------------------------------------------
+[2024-10-11 02:24:36.264678] [Optimizer] Iter=1  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:36.264693] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:24:36.264706] --------------------------------------------------------
+[2024-10-11 02:24:36.264719] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:24:36.360330] [!] UE process stopped
+[2024-10-11 02:24:36.360581] [!] UE process crashed
+[2024-10-11 02:24:36.360592] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:36.360598] [PacketLogger] Packet Number:8, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:36.370695] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:36.381450] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:36.401652] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:36.462089] [!] UE process started
+[2024-10-11 02:24:36.540802] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:24:37.265713] [UE] Restarting connection...
+[2024-10-11 02:24:37.265770] [!] UE process stopped
+[2024-10-11 02:24:37.416765] [!] UE process started
+[2024-10-11 02:24:40.645284] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:24:40.648099] --------------------------------------------------------
+[2024-10-11 02:24:40.648130] [Optimizer] Iter=2  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:40.648136] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:24:40.648141] --------------------------------------------------------
+[2024-10-11 02:24:40.658231] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:24:40.748806] [!] UE process stopped
+[2024-10-11 02:24:40.751737] [!] UE process crashed
+[2024-10-11 02:24:40.751746] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:40.751752] [PacketLogger] Packet Number:22, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:40.761813] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:40.771914] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:40.792092] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:40.852474] [!] UE process started
+[2024-10-11 02:24:40.930945] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:24:41.645774] [UE] Restarting connection...
+[2024-10-11 02:24:41.645863] [!] UE process stopped
+[2024-10-11 02:24:41.807143] [!] UE process started
+[2024-10-11 02:24:45.033764] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:24:45.036513] --------------------------------------------------------
+[2024-10-11 02:24:45.036537] [Optimizer] Iter=3  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:45.036550] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:24:45.036566] --------------------------------------------------------
+[2024-10-11 02:24:45.036579] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:24:45.117127] [!] UE process stopped
+[2024-10-11 02:24:45.125596] [!] UE process crashed
+[2024-10-11 02:24:45.125652] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:45.125673] [PacketLogger] Packet Number:36, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:45.135750] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:45.145861] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:45.166027] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:45.226405] [!] UE process started
+[2024-10-11 02:24:45.305148] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:24:46.030049] [UE] Restarting connection...
+[2024-10-11 02:24:46.030111] [!] UE process stopped
+[2024-10-11 02:24:46.192675] [!] UE process started
+[2024-10-11 02:24:49.424775] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:24:49.427615] --------------------------------------------------------
+[2024-10-11 02:24:49.427655] [Optimizer] Iter=4  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:49.427669] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:24:49.427682] --------------------------------------------------------
+[2024-10-11 02:24:49.427695] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:24:49.518681] [!] UE process stopped
+[2024-10-11 02:24:49.518829] [!] UE process crashed
+[2024-10-11 02:24:49.518841] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:49.518848] [PacketLogger] Packet Number:50, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:49.528925] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:49.539571] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:49.560573] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:49.621003] [!] UE process started
+[2024-10-11 02:24:49.698463] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:24:50.423187] [UE] Restarting connection...
+[2024-10-11 02:24:50.423252] [!] UE process stopped
+[2024-10-11 02:24:50.585289] [!] UE process started
+[2024-10-11 02:24:53.786668] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:24:53.796928] --------------------------------------------------------
+[2024-10-11 02:24:53.796988] [Optimizer] Iter=5  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:53.797001] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:24:53.797012] --------------------------------------------------------
+[2024-10-11 02:24:53.797024] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:24:53.883834] [!] UE process stopped
+[2024-10-11 02:24:53.883966] [!] UE process crashed
+[2024-10-11 02:24:53.883989] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:53.884009] [PacketLogger] Packet Number:64, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:53.894089] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:53.904235] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:53.924429] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:53.984831] [!] UE process started
+[2024-10-11 02:24:54.073576] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:24:54.788715] [UE] Restarting connection...
+[2024-10-11 02:24:54.788761] [!] UE process stopped
+[2024-10-11 02:24:54.949913] [!] UE process started
+[2024-10-11 02:24:58.184809] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:24:58.195017] --------------------------------------------------------
+[2024-10-11 02:24:58.195059] [Optimizer] Iter=6  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:24:58.195064] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:24:58.195068] --------------------------------------------------------
+[2024-10-11 02:24:58.195072] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:24:58.281087] [!] UE process stopped
+[2024-10-11 02:24:58.281192] [!] UE process crashed
+[2024-10-11 02:24:58.281201] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:58.281207] [PacketLogger] Packet Number:78, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:24:58.291292] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:58.301823] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:58.322064] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:24:58.382542] [!] UE process started
+[2024-10-11 02:24:58.460722] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:24:59.186184] [UE] Restarting connection...
+[2024-10-11 02:24:59.186262] [!] UE process stopped
+[2024-10-11 02:24:59.347382] [!] UE process started
+[2024-10-11 02:25:02.595932] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:25:02.598720] --------------------------------------------------------
+[2024-10-11 02:25:02.598769] [Optimizer] Iter=7  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:25:02.598780] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:25:02.598790] --------------------------------------------------------
+[2024-10-11 02:25:02.608860] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:25:02.699586] [!] UE process stopped
+[2024-10-11 02:25:02.699716] [!] UE process crashed
+[2024-10-11 02:25:02.699725] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:25:02.699736] [PacketLogger] Packet Number:92, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:25:02.699740] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:25:02.719864] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:25:02.740031] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:25:02.807080] [!] UE process started
+[2024-10-11 02:25:02.877658] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:25:03.602677] [UE] Restarting connection...
+[2024-10-11 02:25:03.602739] [!] UE process stopped
+[2024-10-11 02:25:03.757298] [!] UE process started
+[2024-10-11 02:25:06.950152] [UE] Found RAR. Connection Timeout: 1000 MS
+[2024-10-11 02:25:06.952956] --------------------------------------------------------
+[2024-10-11 02:25:06.953010] [Optimizer] Iter=8  Params=[0.2,0.2,0.2,0.2,0.2,0.2,...,0.2]
+[2024-10-11 02:25:06.953060] [Optimizer] Fitness=2  Adj. Fitness=-2
+[2024-10-11 02:25:06.953088] --------------------------------------------------------
+[2024-10-11 02:25:06.953122] [M] TX --> RRC Setup  (Padding 62 bytes) 
+[2024-10-11 02:25:07.043657] [!] UE process stopped
+[2024-10-11 02:25:07.046507] [!] UE process crashed
+[2024-10-11 02:25:07.046514] [AnomalyReport] [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:25:07.046522] [PacketLogger] Packet Number:106, Comment: [Crash] Service stopped at state "TX / RRC / rrcSetup"
+[2024-10-11 02:25:07.056613] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:25:07.066728] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:25:07.086881] [M] TX --> RRC Setup[UNKNOWN PER: 10.9 Unconstrained]  (Padding 62 bytes) 
+[2024-10-11 02:25:07.157488] [!] UE process started
+[2024-10-11 02:25:07.217954] [AlertSender:Gmail] Creating token.json
+[2024-10-11 02:25:07.953037] [UE] Restarting connection...
+[2024-10-11 02:25:07.953083] [!] UE process stopped
+[2024-10-11 02:25:08.108448] [!] UE process started
+```
