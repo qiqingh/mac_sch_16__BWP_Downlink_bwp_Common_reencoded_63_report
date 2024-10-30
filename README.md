@@ -52,7 +52,7 @@ __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
 ```
 
 **Malformed Packet Send From the Base Station**
-![Malformed Packet](https://github.com/qiqingh/OAI_Code_Analysis/blob/main/mac_sch_16__BWP_Downlink_bwp_Common_reencoded_63/pcap.png)
+![Malformed Packet](https://github.com/qiqingh/mac_sch_16__BWP_Downlink_bwp_Common_reencoded_63_report/blob/main/pcap.png)
 
 
 **PoC Code**
