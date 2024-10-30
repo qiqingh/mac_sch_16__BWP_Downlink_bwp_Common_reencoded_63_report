@@ -56,6 +56,8 @@ __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
 
 
 **PoC Code**
+
+
 The following PoC code generates a falsified packet sent from the Base Station (sender) to the User Equipment (receiver). Due to a vulnerability in the User Equipment, this packet causes the device to crash, resulting in a Denial of Service (DoS).
 
 To compile and run this PoC code, you'll need the environment described here: https://github.com/asset-group/5ghoul-5g-nr-attacks?tab=readme-ov-file#4--create-your-own-5g-exploits-test-cases
