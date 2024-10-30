@@ -1,5 +1,5 @@
 # mac_sch_16__BWP_Downlink_bwp_Common_reencoded_63_report
-**Vulnerability Soucce Code**
+**Vulnerability Source Code**
 https://gitlab.eurecom.fr/oai/openairinterface5g/-/blob/0afa3f3193f77ce718148ca48cbf18b321d1cf23/openair2/LAYER2/NR_MAC_COMMON/nr_mac_common.c#L3722
 
 ```
