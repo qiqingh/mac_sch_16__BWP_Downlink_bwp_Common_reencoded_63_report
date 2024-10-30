@@ -112,52 +112,6 @@ int tx_post_dissection(uint8_t *pkt_buf, int pkt_length, wd_modules_ctx_t *ctx)
 **Crash Event Log**
 
 ```console
-[2024-10-11 02:24:29.401786] [ParseArgs] "EnableSimulator" unchanged (true)
-[2024-10-11 02:24:29.401879] [ParseArgs] "MCC" unchanged ("001")
-[2024-10-11 02:24:29.401892] [ParseArgs] "MNC" unchanged ("01")
-[2024-10-11 02:24:29.401901] [ParseArgs] "GlobalTimeout" unchanged (false)
-[2024-10-11 02:24:29.401910] [ParseArgs] "EnableMutation" unchanged (false)
-[2024-10-11 02:24:29.401917] [Modules] Loading C++ Modules at "modules/exploits/5gnr_gnb"
-[2024-10-11 02:24:29.942390] [Modules] 2022/2022 Modules Compiled / Loaded
-[2024-10-11 02:24:29.942394] [Modules] All modules using prefix
-[2024-10-11 02:24:29.942399] [Modules] mac_sch_1__CellGroupConfig_rlc_BearerToAddModList_reencoded_0 configured and ready!
-[2024-10-11 02:24:29.942404] [Modules] Enabled module "mac_sch_1__CellGroupConfig_rlc_BearerToAddModList_reencoded_0"
-[2024-10-11 02:24:29.942408] ----------LTE Fuzzer----------
-[2024-10-11 02:24:29.942414] Loading Model...
-[2024-10-11 02:24:29.942419] Model Loaded!
-[2024-10-11 02:24:29.942423] [Machine] Layer:"NAS"
-[2024-10-11 02:24:29.942428] [Machine] --> States:0, Transitions:0
-[2024-10-11 02:24:29.942433] [Machine] Layer:"RRC"
-[2024-10-11 02:24:29.942437] [Machine] --> States:0, Transitions:0
-[2024-10-11 02:24:29.942442] [Machine] Layer:"RLC"
-[2024-10-11 02:24:29.942447] [Machine] --> States:0, Transitions:0
-[2024-10-11 02:24:29.942451] [Machine] Layer:"MAC-NR"
-[2024-10-11 02:24:29.942456] [Machine] --> States:0, Transitions:0
-[2024-10-11 02:24:29.942461] [Machine] Total States: 38
-[2024-10-11 02:24:29.942468] [Machine] Total Transitions: 308
-[2024-10-11 02:24:29.942472] [Monitor] Connection string: adb -s UWEUW4XG8XCA8PWS shell "logcat -b radio,crash,system,main"
-[2024-10-11 02:24:29.952577] [Monitor] ADB Connected to device: UWEUW4XG8XCA8PWS
-[2024-10-11 02:24:29.979308] [SHMDriver] SHM:/tmp/wshm, Channel:0, Mode:1, MQUEUE:/wshm
-[2024-10-11 02:24:30.014183] [SHMDriver] SHM:/tmp/wshm, Channel:1, Mode:1
-[2024-10-11 02:24:30.014239] [SHMDriver] SHM:/tmp/wshm, Channel:2, Mode:1
-[2024-10-11 02:24:30.014244] [SHMDriver] SHM:/tmp/wshm, Channel:3, Mode:1
-[2024-10-11 02:24:30.014247] [SHMDriver] SHM:/tmp/wshm, Channel:4, Mode:1
-[2024-10-11 02:24:30.014251] [SHMDriver] SHM:/tmp/wshm, Channel:5, Mode:1
-[2024-10-11 02:24:30.014254] [SHMDriver] SHM:/tmp/wshm, Channel:6, Mode:1
-[2024-10-11 02:24:30.014258] [Open5GS] Adding IMSI 001010000000001 with K=00112233445566778899AABBCCDDEEFF, OPC=00112233445566778899AABBCCDDEEFF, APN=default
-[2024-10-11 02:24:30.129307] [Open5GS] Adding IMSI 001010100011321 with K=12345678901234567890123456789012, OP=12345678901234561234567890123456, APN=default
-[2024-10-11 02:24:30.243241] [Open5GS] Adding IMSI 001010000064950 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
-[2024-10-11 02:24:30.360644] [Open5GS] Adding IMSI 001010000064951 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
-[2024-10-11 02:24:30.477791] [Open5GS] Adding IMSI 001020000064951 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
-[2024-10-11 02:24:30.589535] [Open5GS] Adding IMSI 001010000064952 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
-[2024-10-11 02:24:30.700992] [Open5GS] Adding IMSI 001010000064953 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=default
-[2024-10-11 02:24:30.812826] [Open5GS] Adding IMSI 999700000064959 with K=5FBC6D9274D7D3F03E32B12DBF582424, OPC=32B95812161923774B71D508A1D4D3B6, APN=internet
-[2024-10-11 02:24:30.928087] [Open5GS] Adding IMSI 901700000039907 with K=33CD0E15C56301487706C843E5BC53C1, OPC=3E91AD887FB569F4A68EEB8282872B0F, APN=internet
-[2024-10-11 02:24:31.041477] [Open5GS] Adding IMSI 222010000039900 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=internet
-[2024-10-11 02:24:31.156220] [Open5GS] Adding IMSI 208950000039900 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=internet
-[2024-10-11 02:24:31.267186] [Open5GS] Adding IMSI 525070000039900 with K=3ac9ec861c3d5209ddb00d88b8b2c933, OPC=ad3d5e6e6df84bf3fd799b39c70e7c74, APN=internet
-[2024-10-11 02:24:31.379037] [Open5GS] Adding IMSI 222010100000002 with K=0c2d427dc188ed0284c4dd0fde705060, OPC=64f4f96c49dfac6a89b45dfa15574a75, APN=internet
-[2024-10-11 02:24:31.496216] [Open5GS] Adding IMSI 901700000039908 with K=E5EB44B93317E84EBA206EF962A29D8C, OPC=4242F3B4D58A5DA39336E1F8CB643B2A, APN=internet
 [2024-10-11 02:24:31.613373] [Open5GS] Subscribers registered to core network: 14
 [2024-10-11 02:24:31.995643] [!] Simulation Enabled, disabling ModemManager and HubCtrl. Remember to enabled them later!
 [2024-10-11 02:24:32.995040] Starting OAI UE Simulator (RFSIM)
